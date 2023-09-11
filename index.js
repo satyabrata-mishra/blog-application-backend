@@ -8,6 +8,7 @@ require("dotenv").config();
 app.use(express.json());
 app.use(cors());
 app.use('/posts',require('./routes/posts.js'));
+app.use('/saved',require('./routes/saved.js'));
 
 app.get('/', (req, res) => {
     res.status(200).json({ "message": "I am blog website backend" });
